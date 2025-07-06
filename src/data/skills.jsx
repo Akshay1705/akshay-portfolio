@@ -59,6 +59,7 @@ const skills = [
   { id: 26, name: 'Git', icon: <FaGitAlt className="text-orange-500" />, category: 'Tools' },
   { id: 27, name: 'VS Code', icon: <FaReact className="text-blue-500" />, category: 'Tools' },
   { id: 28, name: 'XAMPP', icon: <FaPhp className="text-orange-400" />, category: 'Tools' },
+  { id: 21, name: 'Eclipse IDE', icon: '🌒', category: 'Tools' },
   { id: 29, name: 'Tomcat', icon: <FaJava className="text-gray-500" />, category: 'Tools' },
   { id: 30, name: 'Vite', icon: <FaBolt className="text-yellow-500" />, category: 'Tools' },
   { id: 31, name: 'phpMyAdmin', icon: <SiPhpmyadmin className="text-orange-600" />, category: 'Tools' },
