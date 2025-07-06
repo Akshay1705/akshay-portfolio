@@ -1,12 +1,41 @@
-# React + Vite
+# Akshay Parekh | Developer Portfolio 🚀
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> A modern, responsive portfolio website to showcase my skills, projects, and contact information. Built with React, Tailwind CSS, Vite, Three.js, and AOS for stunning UI animations and interactions.
 
-Currently, two official plugins are available:
+![Banner](./public/Banner.png) <!-- optional if you add a banner -->
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🌐 Live Demo
 
-## Expanding the ESLint configuration
+[🔗 Visit Portfolio](https://akshay.dev) <!-- Replace with your actual deployed link -->
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🛠️ Tech Stack
+
+- **Frontend**: React.js, Tailwind CSS, JavaScript (ES6+)
+- **3D Animation**: Three.js via `@react-three/fiber` and `drei`
+- **UI Animation**: AOS (Animate on Scroll)
+- **Backend Projects** (Showcased): Core PHP, Laravel, JSP, Servlet, Node.js + Express
+- **Other Tools**: Vite, EmailJS, Git & GitHub, Postman
+
+---
+
+## ✨ Features
+
+- 🔹 Fully responsive for all devices
+- 🔹 Animated hero section with typing and 3D visuals
+- 🔹 Projects displayed with category mapping (React, Laravel, PHP, Vue)
+- 🔹 Dynamic skills filter (Languages, Frontend, Backend, Database, Tools)
+- 🔹 Contact form integrated with **EmailJS**
+- 🔹 Dark mode toggle
+- 🔹 SEO-ready with meta tags and favicon
+
+---
+
+## 📦 Getting Started
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/yourusername/akshay-portfolio.git
+cd akshay-portfolio
