@@ -24,8 +24,8 @@
 
 - 🔹 Fully responsive for all devices
 - 🔹 Animated hero section with typing and 3D visuals
-- 🔹 Projects displayed with category mapping (React, Laravel, PHP, Vue)
-- 🔹 Dynamic skills filter (Languages, Frontend, Backend, Database, Tools)
+- 🔹 Projects displayed using object-based structure (easy to add/edit), each with image, description, tech stack, and GitHub link
+- 🔹 Skills section with category-based filters (All, Languages, Frontend, Backend, Database, Tools)
 - 🔹 Contact form integrated with **EmailJS**
 - 🔹 Dark mode toggle
 - 🔹 SEO-ready with meta tags and favicon
