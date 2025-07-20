@@ -62,7 +62,7 @@ const skills = [
   { id: 28, name: 'Eclipse IDE', icon: '🌒', category: 'Tools' },
   { id: 29, name: 'Tomcat', icon: <FaJava className="text-gray-500" />, category: 'Tools' },
   { id: 30, name: 'Vite', icon: <FaBolt className="text-yellow-500" />, category: 'Tools' },
-  { id: 21, name: 'MongoDB Atlas', icon: <SiMongodb className="text-green-500" />, category: 'Tools' },
+  { id: 31, name: 'MongoDB Atlas', icon: <SiMongodb className="text-green-500" />, category: 'Tools' },
   { id: 32, name: 'phpMyAdmin', icon: <SiPhpmyadmin className="text-orange-600" />, category: 'Tools' },
 
   // Deployment Category:
