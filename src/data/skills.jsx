@@ -66,11 +66,9 @@ const skills = [
   { id: 32, name: 'phpMyAdmin', icon: <SiPhpmyadmin className="text-orange-600" />, category: 'Tools' },
 
   // Deployment Category:
-{ id: 33, name: 'Vercel', icon: '▲', category: 'Deployment' },
-{ id: 34, name: 'Netlify', icon: '🌐', category: 'Deployment' },
-{ id: 35, name: 'Render', icon: '🚀', category: 'Deployment' },
-
-  
+  { id: 33, name: 'Vercel', icon: '▲', category: 'Deployment' },
+  { id: 34, name: 'Netlify', icon: '🌐', category: 'Deployment' },
+  { id: 35, name: 'Render', icon: '🚀', category: 'Deployment' },
 ]
 
 
