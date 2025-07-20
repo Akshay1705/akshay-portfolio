@@ -51,7 +51,7 @@ const skills = [
 
   { id: 20, name: 'MySQL', icon: <SiMysql className="text-blue-700" />, category: 'Database' },
   { id: 21, name: 'MongoDB', icon: <SiMongodb className="text-green-500" />, category: 'Database' },
-  { id: 22, name: 'MongoDB Atlas', icon: <SiMongodb className="text-green-500" />, category: 'Database' },
+  { id: 22, name: 'MongoDB Atlas', icon: <SiMongodb className="text-green-500" />, category: 'Tools' },
 
   { id: 23, name: 'REST APIs', icon: <TbApi className="text-green-600" />, category: 'API' },
   { id: 24, name: 'EmailJS', icon: <FaEnvelope className="text-red-500" />, category: 'API' },
