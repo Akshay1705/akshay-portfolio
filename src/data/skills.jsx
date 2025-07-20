@@ -51,6 +51,7 @@ const skills = [
 
   { id: 20, name: 'MySQL', icon: <SiMysql className="text-blue-700" />, category: 'Database' },
   { id: 21, name: 'MongoDB', icon: <SiMongodb className="text-green-500" />, category: 'Database' },
+  { id: 22, name: 'MongoDB Atlas', icon: <SiMongodb className="text-green-500" />, category: 'Database' },
 
   { id: 23, name: 'REST APIs', icon: <TbApi className="text-green-600" />, category: 'API' },
   { id: 24, name: 'EmailJS', icon: <FaEnvelope className="text-red-500" />, category: 'API' },
@@ -63,6 +64,11 @@ const skills = [
   { id: 29, name: 'Tomcat', icon: <FaJava className="text-gray-500" />, category: 'Tools' },
   { id: 30, name: 'Vite', icon: <FaBolt className="text-yellow-500" />, category: 'Tools' },
   { id: 31, name: 'phpMyAdmin', icon: <SiPhpmyadmin className="text-orange-600" />, category: 'Tools' },
+
+  // Deployment Category:
+{ id: 33, name: 'Vercel', icon: '▲', category: 'Deployment' },
+{ id: 34, name: 'Netlify', icon: '🌐', category: 'Deployment' },
+{ id: 35, name: 'Render', icon: '🚀', category: 'Deployment' },
 
   
 ]

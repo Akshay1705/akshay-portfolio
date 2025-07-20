@@ -23,7 +23,7 @@ const Hero = () => {
                   'Full Stack Developer',
                   'MERN & Laravel Enthusiast',
                   'CSE @ Parul University',
-                  'Problem Solver 🚀',
+                  'Problem Solver',
                 ]}
                 loop={true}
                 cursor

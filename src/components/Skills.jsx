@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import skills from '../data/skills'
 
-const categories = ['All', 'Languages', 'Frontend', 'Backend', 'Database', 'API', 'Tools']
+const categories = ['All', 'Languages', 'Frontend', 'Backend', 'Database', 'API', 'Tools' , 'Deployment']
 
 const Skills = () => {
   const [selectedCategory, setSelectedCategory] = useState('All')
