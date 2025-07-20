@@ -51,19 +51,19 @@ const skills = [
 
   { id: 20, name: 'MySQL', icon: <SiMysql className="text-blue-700" />, category: 'Database' },
   { id: 21, name: 'MongoDB', icon: <SiMongodb className="text-green-500" />, category: 'Database' },
-  { id: 22, name: 'MongoDB Atlas', icon: <SiMongodb className="text-green-500" />, category: 'Tools' },
-
-  { id: 23, name: 'REST APIs', icon: <TbApi className="text-green-600" />, category: 'API' },
-  { id: 24, name: 'EmailJS', icon: <FaEnvelope className="text-red-500" />, category: 'API' },
-  { id: 25, name: 'Postman', icon: <SiPostman className="text-orange-500" />, category: 'API' },
-
-  { id: 26, name: 'Git', icon: <FaGitAlt className="text-orange-500" />, category: 'Tools' },
-  { id: 27, name: 'VS Code', icon: <FaReact className="text-blue-500" />, category: 'Tools' },
-  { id: 28, name: 'XAMPP', icon: <FaPhp className="text-orange-400" />, category: 'Tools' },
-  { id: 21, name: 'Eclipse IDE', icon: '🌒', category: 'Tools' },
+  
+  { id: 22, name: 'REST APIs', icon: <TbApi className="text-green-600" />, category: 'API' },
+  { id: 23, name: 'EmailJS', icon: <FaEnvelope className="text-red-500" />, category: 'API' },
+  { id: 24, name: 'Postman', icon: <SiPostman className="text-orange-500" />, category: 'API' },
+  
+  { id: 25, name: 'Git', icon: <FaGitAlt className="text-orange-500" />, category: 'Tools' },
+  { id: 26, name: 'VS Code', icon: <FaReact className="text-blue-500" />, category: 'Tools' },
+  { id: 27, name: 'XAMPP', icon: <FaPhp className="text-orange-400" />, category: 'Tools' },
+  { id: 28, name: 'Eclipse IDE', icon: '🌒', category: 'Tools' },
   { id: 29, name: 'Tomcat', icon: <FaJava className="text-gray-500" />, category: 'Tools' },
   { id: 30, name: 'Vite', icon: <FaBolt className="text-yellow-500" />, category: 'Tools' },
-  { id: 31, name: 'phpMyAdmin', icon: <SiPhpmyadmin className="text-orange-600" />, category: 'Tools' },
+  { id: 21, name: 'MongoDB Atlas', icon: <SiMongodb className="text-green-500" />, category: 'Tools' },
+  { id: 32, name: 'phpMyAdmin', icon: <SiPhpmyadmin className="text-orange-600" />, category: 'Tools' },
 
   // Deployment Category:
 { id: 33, name: 'Vercel', icon: '▲', category: 'Deployment' },
