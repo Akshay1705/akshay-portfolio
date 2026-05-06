@@ -1,45 +1,56 @@
-import soulScriptImg from '../assets/projects/soulscript.png'
-import mediDeskImg from '../assets/projects/medidesk.png'
-import weatherAppImg from '../assets/projects/wetherapp.png'
-import talestogo from '../assets/projects/talestogo.png'
-import wishcraft from '../assets/projects/wishcraft.png'
-import captionAi from '../assets/projects/captionai.png'
+import soulScriptImg from "../assets/projects/soulscript.png";
+import mediDeskImg from "../assets/projects/medidesk.png";
+import weatherAppImg from "../assets/projects/wetherapp.png";
+import talestogo from "../assets/projects/talestogo.png";
+import wishcraft from "../assets/projects/wishcraft.png";
+import captionAi from "../assets/projects/captionai.png";
+import pselitegroupImg from '../assets/projects/pselitegroup.png'
+import itineraryImg from '../assets/projects/itinerary.png'
 
 const projects = [
   {
     id: 1,
     title: "SoulScript - Personal Journaling App",
     tech: "Core PHP + MySQL",
+    tags: ["PHP"],
+    date: "june 2025",
+    type: "personal",
     description:
       "A personal journaling app to write thoughts securely with a clean interface.",
     image: soulScriptImg,
-    // link: "http://your-demo-link.com", // Optional
     github: "https://github.com/Akshay1705/SoulScript.git",
   },
   {
     id: 2,
-    title: "MediDesk - Clinic appointment management",
+    title: "MediDesk - Clinic Appointment Management",
     tech: "Laravel + Inertia.js + Vue + TailwindCSS",
+    tags: ["Laravel"],
+    date: "Nov 2025",
+    type: "personal",
     description:
       "An online appointment and patient management system for clinics and hospitals.",
     image: mediDeskImg,
-    // link: "http://your-demo-link.com", // Optional
     github: "https://github.com/Akshay1705/medidesk.git",
   },
   {
     id: 3,
     title: "Weather App (JSP + Servlet)",
     tech: "JSP + Servlet + Java + OpenWeatherMap API",
+    tags: ["Java"],
+    date: "July 2025",
+    type: "personal",
     description:
       "A dynamic weather forecast application built using JSP and Servlets that fetches real-time weather data.",
     image: weatherAppImg,
-    // link: "http://your-demo-link.com", // Optional
-    github: "https://github.com/your-username/weather-app-jsp",
+    github: "https://github.com/Akshay1705/WeatherApp",
   },
   {
     id: 4,
     title: "TalesToGo - Adventure Bookstore",
-    tech: "React.js + Tailwind CSS + AOS + Responsive UI",
+    tech: "React.js + Tailwind CSS + AOS",
+    tags: ["React"],
+    date: "July 2025",
+    type: "personal",
     description:
       "A responsive adventure-themed bookstore frontend with dark mode, dynamic hero section, and popup-based order form.",
     image: talestogo,
@@ -50,22 +61,53 @@ const projects = [
     id: 5,
     title: "WishCraft - Bucket List Manager",
     tech: "MERN Stack (React, Node.js, Express, MongoDB) + Tailwind CSS",
+    tags: ["MERN", "React"],
+    date: "Aug 2025",
+    type: "personal",
     description:
-      "A full-stack bucket list management app with user authentication, add/update/delete wishes, filtering, status tracking, and pagination. Deployed with Vercel (frontend) and Render + MongoDB Atlas (backend).",
+      "A full-stack bucket list management app with user authentication, add/update/delete wishes, filtering, status tracking, and pagination.",
     image: wishcraft,
     link: "https://wishcraft-frontend.vercel.app/",
-    //github: "https://github.com/Akshay1705/WishCraft.git",
   },
   {
     id: 6,
-    title: "Caption.AI - AI-Powered Social Media Assistant",
-    tech: "Next.js | React | TypeScript | Supabase | Google Gemini | NextAuth.js | Tailwind CSS",
+    title: "Caption.ai - AI-Powered Social Media Assistant",
+    tech: "Next.js + TypeScript + Supabase + Gemini",
+    tags: ["Next.js", "AI"],
+    date: "Oct 2025",
+    type: "personal",
     description:
       "An AI tool that instantly generates creative captions, hashtags, and song suggestions for your social media posts from just a single photo.",
     image: captionAi,
     link: "https://caption-ai-ten.vercel.app/",
     github: "https://github.com/Akshay1705/caption.ai.git",
   },
+  {
+    id: 7,
+    title: "PSEliteGroup – Business Website",
+    tech: "Next.js, Tailwind CSS, Resend (Email API), Vercel",
+    tags: ["Next.js", "Resend"],
+    date: "April 2026",
+    type: "freelance",
+    description:
+      "Developed and deployed a production-ready business website with a functional contact system using Resend email API, custom domain integration, and optimized performance on Vercel.",
+    image: pselitegroupImg,
+    link: "https://pselitegroup.com/",
+    github: "",
+  },
+  {
+    id: 8,
+    title: "Itinerary.ai – AI Travel Planner",
+    tech: "Python, Django, Gemini API",
+    tags: ["Python", "Django", "AI"],
+    date: "Dec 2025",
+    type: "personal",
+    description:
+      "An AI-powered travel planner that generates personalized itineraries based on user preferences using Gemini API, with backend-driven logic and dynamic data handling.",
+    image: itineraryImg,
+    link: "", // 👈 add if deployed
+    github: "https://github.com/Akshay1705/AI-itinerary-generator",
+  },
 ];
 
-export default projects
+export default projects;

@@ -1,43 +1,57 @@
-import React from 'react'
-import { FaLinkedin, FaGithub, FaEnvelope } from 'react-icons/fa'
+import { motion } from "framer-motion";
+import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
+import { fadeUp, viewport } from "../utils/motion";
 
-const Footer = () => {
-  return (
-    <footer className="bg-gray-100 dark:bg-[#0D1117] text-gray-700 dark:text-gray-400 py-6 mt-3">
-      <div className="container mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
-        {/* Left: Text */}
-        <p className="text-center md:text-left text-sm">
-          © {new Date().getFullYear()} <span className="text-blue-500 font-semibold">Akshay Parekh</span>. All rights reserved.
-        </p>
+const Footer = () => (
+  <footer className="bg-white dark:bg-[#0D1117] border-t border-gray-200 dark:border-white/5 py-8">
+    <motion.div
+      variants={fadeUp(0)}
+      initial="hidden"
+      whileInView="show"
+      viewport={viewport}
+      className="container mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4"
+    >
+      <p className="text-sm text-gray-500 dark:text-gray-500">
+        © {new Date().getFullYear()}{" "}
+        <span className="gradient-text font-semibold">Akshay Parekh</span>.{" "}
+        Built with React & Framer Motion.
+      </p>
 
-        {/* Right: Social Icons */}
-        <div className="flex gap-4 text-lg">
-          <a
-            href="https://www.linkedin.com/in/akshay-parekh1705/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-blue-600 transition"
-          >
-            <FaLinkedin />
-          </a>
-          <a
-            href="https://github.com/Akshay1705"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-gray-800 dark:hover:text-white transition"
-          >
-            <FaGithub />
-          </a>
-          <a
-            href="mailto:parekhakshay25@email.com"
-            className="hover:text-red-500 transition"
-          >
-            <FaEnvelope />
-          </a>
-        </div>
+      <div className="flex gap-5 text-lg text-gray-400">
+        {[
+          {
+            icon: FaLinkedin,
+            href: "https://www.linkedin.com/in/akshay-parekh1705/",
+            hover: "hover:text-blue-500",
+          },
+          {
+            icon: FaGithub,
+            href: "https://github.com/Akshay1705",
+            hover: "hover:text-black-500 dark:hover:text-white",
+          },
+          {
+            icon: FaEnvelope,
+            href: "mailto:parekhakshay25@email.com",
+            hover: "hover:text-red-400",
+          },
+        ].map(({ icon, href, hover }) => {
+          const Icon = icon;
+          return (
+            <motion.a
+              key={href}
+              href={href}
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ y: -3, scale: 1.15 }}
+              className={`transition-colors duration-200 ${hover}`}
+            >
+              <Icon />
+            </motion.a>
+          );
+        })}
       </div>
-    </footer>
-  )
-}
+    </motion.div>
+  </footer>
+);
 
-export default Footer
+export default Footer;
