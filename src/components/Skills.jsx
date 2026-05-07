@@ -47,9 +47,21 @@ const Skills = () => {
   return (
     <section
       id="skills"
-      className="py-24 bg-white dark:bg-[#0D1117] dark:text-gray-200"
+      className="relative py-24 bg-white dark:bg-[#0D1117] dark:text-gray-200 overflow-hidden noise-overlay"
     >
-      <div className="container mx-auto px-6">
+      {/* BG layers */}
+      <div className="absolute inset-0 z-0 indigo-grid pointer-events-none" />
+      <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+        <div
+          className="orb orb-indigo blob-3"
+          style={{ width: 350, height: 350, bottom: "-80px", left: "-60px" }}
+        />
+        <div
+          className="orb orb-purple blob-1"
+          style={{ width: 280, height: 280, top: "-60px", right: "10%" }}
+        />
+      </div>
+      <div className="container mx-auto px-6 relative z-10">
         {/* Heading */}
         <motion.div
           variants={staggerContainer(0.1)}

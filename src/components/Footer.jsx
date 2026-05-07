@@ -3,13 +3,14 @@ import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
 import { fadeUp, viewport } from "../utils/motion";
 
 const Footer = () => (
-  <footer className="bg-white dark:bg-[#0D1117] border-t border-gray-200 dark:border-white/5 py-8">
+  <footer className="relative bg-white dark:bg-[#0D1117] border-t border-gray-200 dark:border-white/5 py-8 overflow-hidden">
+    <div className="absolute inset-0 z-0 indigo-grid pointer-events-none opacity-50" />
     <motion.div
       variants={fadeUp(0)}
       initial="hidden"
       whileInView="show"
       viewport={viewport}
-      className="container mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4"
+      className="container mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4 relative z-10"
     >
       <p className="text-sm text-gray-500 dark:text-gray-500">
         © {new Date().getFullYear()}{" "}

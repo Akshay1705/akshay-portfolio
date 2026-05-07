@@ -5,10 +5,12 @@ import Projects from "./components/Projects";
 import Skills from "./components/Skills";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import Cursor from "./components/Cursor";
 
 const App = () => {
   return (
     <div className="font-sans bg-gray-50 dark:bg-[#0A0A0F] transition-colors duration-300">
+      <Cursor />
       <Navbar />
       <main>
         <Hero />

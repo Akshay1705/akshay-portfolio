@@ -105,9 +105,29 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="py-24 bg-gray-50 dark:bg-[#0A0A0F] dark:text-gray-200"
+      className="relative py-24 bg-gray-50 dark:bg-[#0A0A0F] overflow-hidden dark:text-gray-200"
     >
-      <div className="container mx-auto px-6">
+      {/* BG layers */}
+      <div className="absolute inset-0 z-0 indigo-grid pointer-events-none" />
+      <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+        <div
+          className="orb orb-teal   blob-2"
+          style={{ width: 400, height: 400, top: "-80px", right: "-80px" }}
+        />
+        <div
+          className="orb orb-indigo blob-3"
+          style={{ width: 300, height: 300, bottom: "-60px", left: "-40px" }}
+        />
+      </div>
+      {/* Center radial glow */}
+      <div
+        className="absolute inset-0 z-0 pointer-events-none"
+        style={{
+          background:
+            "radial-gradient(ellipse at center, rgba(99,102,241,0.05) 0%, transparent 65%)",
+        }}
+      />
+      <div className="container mx-auto px-6 relative z-10">
         {/* Heading */}
         <motion.div
           variants={staggerContainer(0.1)}
@@ -127,8 +147,7 @@ const Contact = () => {
             className="text-gray-500 dark:text-gray-400 mt-4 text-sm max-w-md mx-auto"
           >
             Have a project idea or want to collaborate? Drop me a message
-            <br />
-            - I reply within 24 hours.
+            <br />- I reply within 24 hours.
           </motion.p>
         </motion.div>
 
@@ -141,7 +160,7 @@ const Contact = () => {
             initial="hidden"
             whileInView="show"
             viewport={viewport}
-            className="flex-1 w-full space-y-4"
+            className="flex-1 w-full space-y-4 peer w-full px-4 pt-5 pb-2 rounded-xl bg-white dark:bg-white/5 border border-gray-300 dark:border-white/10 text-gray-900 dark:text-white outline-none focus:border-indigo-500 transition-all duration-200 resize-none text-sm shadow-sm"
           >
             <FloatingInput label="Your Name" name="from_name" />
             <FloatingInput label="Your Email" name="reply_to" type="email" />
@@ -207,7 +226,10 @@ const Contact = () => {
                 >
                   <div
                     className="w-10 h-10 rounded-full flex items-center justify-center text-lg"
-                    style={{ background: `${social.color}22`, color: social.color }}
+                    style={{
+                      background: `${social.color}22`,
+                      color: social.color,
+                    }}
                   >
                     <social.icon />
                   </div>

@@ -27,10 +27,29 @@ const Projects = () => {
   return (
     <section
       id="projects"
-      className="py-24 bg-gray-50 dark:bg-[#0A0A0F] text-gray-800 dark:text-gray-200"
+      className="relative py-24 bg-gray-50 dark:bg-[#0A0A0F] text-gray-800 dark:text-gray-200 overflow-hidden"
     >
-      <div className="container mx-auto px-6">
-
+      {/* BG layers */}
+      <div className="absolute inset-0 z-0 indigo-grid pointer-events-none" />
+      <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+        <div
+          className="orb orb-purple blob-2"
+          style={{ width: 450, height: 450, top: "-100px", left: "30%" }}
+        />
+        <div
+          className="orb orb-teal blob-1"
+          style={{ width: 300, height: 300, bottom: "-60px", right: "-60px" }}
+        />
+      </div>
+      {/* Top fade from hero */}
+      <div
+        className="absolute top-0 left-0 right-0 h-24 z-0 pointer-events-none"
+        style={{
+          background:
+            "linear-gradient(to bottom, rgba(99,102,241,0.04), transparent)",
+        }}
+      />
+      <div className="container mx-auto px-6 relative z-10">
         {/* Heading */}
         <motion.div
           variants={staggerContainer(0.1)}
@@ -49,7 +68,8 @@ const Projects = () => {
             variants={fadeUp(0.1)}
             className="text-gray-500 dark:text-gray-400 mt-4 max-w-xl mx-auto text-sm"
           >
-            Real-world applications built with modern technologies. Click any card to explore.
+            Real-world applications built with modern technologies. Click any
+            card to explore.
           </motion.p>
         </motion.div>
 
@@ -61,14 +81,14 @@ const Projects = () => {
           viewport={viewport}
           className="flex flex-wrap justify-center gap-3 mb-12"
         >
-          {filters.map(f => (
+          {filters.map((f) => (
             <button
               key={f}
               onClick={() => setActive(f)}
               className={`px-5 py-2 rounded-full text-sm font-medium border transition-all duration-200 ${
                 active === f
-                  ? 'bg-indigo-500 border-indigo-500 text-white shadow-lg shadow-indigo-500/20'
-                  : 'border-gray-300 dark:border-gray-700 text-gray-600 dark:text-gray-400 hover:border-indigo-500/50 hover:text-indigo-500'
+                  ? "bg-indigo-500 border-indigo-500 text-white shadow-lg shadow-indigo-500/20"
+                  : "border-gray-300 dark:border-gray-700 text-gray-600 dark:text-gray-400 hover:border-indigo-500/50 hover:text-indigo-500"
               }`}
             >
               {f}
@@ -100,7 +120,7 @@ const Projects = () => {
                 className="group relative glass rounded-2xl overflow-hidden flex flex-col hover:shadow-lg hover:shadow-indigo-500/10 transition-all duration-300 cursor-pointer"
               >
                 {/* Freelance badge */}
-                {project.type === 'freelance' && (
+                {project.type === "freelance" && (
                   <div className="absolute top-3 right-3 z-20 flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-semibold bg-amber-400/90 text-amber-900 shadow-md">
                     <HiSparkles size={11} />
                     Client Work
@@ -128,7 +148,7 @@ const Projects = () => {
                       <FiCalendar size={10} /> {project.date}
                     </span>
                     <div className="flex gap-1 flex-wrap justify-end">
-                      {project.tags?.map(tag => (
+                      {project.tags?.map((tag) => (
                         <span
                           key={tag}
                           className="text-xs px-2 py-0.5 rounded-full bg-indigo-100 dark:bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 font-medium"
@@ -181,7 +201,6 @@ const Projects = () => {
               </button>
 
               <div className="flex flex-col md:flex-row">
-
                 {/* Left: Image */}
                 <div
                   className="md:w-1/2 relative bg-gray-100 dark:bg-black cursor-zoom-in"
@@ -193,7 +212,7 @@ const Projects = () => {
                     className="w-full h-64 md:h-full object-cover"
                   />
                   {/* Freelance badge inside modal */}
-                  {selectedProject.type === 'freelance' && (
+                  {selectedProject.type === "freelance" && (
                     <div className="absolute top-3 left-3 flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-semibold bg-amber-400/90 text-amber-900 shadow-md">
                       <HiSparkles size={11} />
                       Client Work
@@ -212,7 +231,7 @@ const Projects = () => {
                       <span className="text-xs text-gray-400 flex items-center gap-1">
                         <FiCalendar size={10} /> {selectedProject.date}
                       </span>
-                      {selectedProject.tags?.map(tag => (
+                      {selectedProject.tags?.map((tag) => (
                         <span
                           key={tag}
                           className="text-xs px-2 py-0.5 rounded-full bg-indigo-100 dark:bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 font-medium"
@@ -238,14 +257,18 @@ const Projects = () => {
                         Tech Stack
                       </p>
                       <div className="flex flex-wrap gap-2">
-                        {selectedProject.tech.split(/[+|,]/).map(t => t.trim()).filter(Boolean).map(t => (
-                          <span
-                            key={t}
-                            className="text-xs px-3 py-1 rounded-full bg-gray-100 dark:bg-white/5 text-gray-700 dark:text-gray-300 border border-gray-200 dark:border-white/10"
-                          >
-                            {t}
-                          </span>
-                        ))}
+                        {selectedProject.tech
+                          .split(/[+|,]/)
+                          .map((t) => t.trim())
+                          .filter(Boolean)
+                          .map((t) => (
+                            <span
+                              key={t}
+                              className="text-xs px-3 py-1 rounded-full bg-gray-100 dark:bg-white/5 text-gray-700 dark:text-gray-300 border border-gray-200 dark:border-white/10"
+                            >
+                              {t}
+                            </span>
+                          ))}
                       </div>
                     </div>
                   </div>
@@ -313,9 +336,8 @@ const Projects = () => {
           </motion.div>
         )}
       </AnimatePresence>
-
     </section>
-  )
+  );
 }
 
 export default Projects

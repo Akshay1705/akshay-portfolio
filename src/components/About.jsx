@@ -39,9 +39,21 @@ const About = () => {
   return (
     <section
       id="about"
-      className="py-24 bg-white dark:bg-[#0D1117] text-gray-800 dark:text-gray-200"
+      className="relative py-24 bg-white dark:bg-[#0D1117] text-gray-800 dark:text-gray-200 overflow-hidden"
     >
-      <div className="container mx-auto px-6">
+      {/* BG layers */}
+      <div className="absolute inset-0 z-0 indigo-grid pointer-events-none" />
+      <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+        <div
+          className="orb orb-indigo blob-1"
+          style={{ width: 400, height: 400, top: "-100px", right: "-80px" }}
+        />
+        <div
+          className="orb orb-teal blob-3"
+          style={{ width: 300, height: 300, bottom: "-80px", left: "-60px" }}
+        />
+      </div>
+      <div className="container mx-auto px-6 relative z-10">
         <motion.div
           variants={staggerContainer(0.15)}
           initial="hidden"
