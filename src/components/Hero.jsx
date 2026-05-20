@@ -24,7 +24,7 @@ const useMagnetic = () => {
   return { sx, sy, onMove, onLeave };
 };
 
-// ── Floating code snippets data ───────────────────────────
+// ── Floating code snippets ────────────────────────────────
 const codeSnippets = [
   {
     text: "const dev = () =>",
@@ -33,7 +33,7 @@ const codeSnippets = [
     left: "-22%",
     color: "#4f46e5",
     size: "12px",
-  }, // darker indigo
+  },
   {
     text: "{ }",
     float: "float-2",
@@ -41,7 +41,7 @@ const codeSnippets = [
     right: "-22%",
     color: "#0d9488",
     size: "20px",
-  }, // darker teal
+  },
   {
     text: "<Akshay />",
     float: "float-3",
@@ -49,7 +49,7 @@ const codeSnippets = [
     left: "-24%",
     color: "#7c3aed",
     size: "12px",
-  }, // darker purple
+  },
   {
     text: "npm run dev",
     float: "float-4",
@@ -108,13 +108,13 @@ const particleOptions = {
     number: { value: 50, density: { enable: true, area: 900 } },
     color: { value: ["#6366f1", "#14b8a6", "#a855f7"] },
     opacity: {
-      value: { min: 0.4, max: 0.8 }, // 👈 much more visible
+      value: { min: 0.4, max: 0.8 },
       animation: { enable: true, speed: 0.6, sync: false },
     },
-    size: { value: { min: 2, max: 4 } }, // 👈 bigger dots
+    size: { value: { min: 2, max: 4 } },
     move: {
       enable: true,
-      speed: 0.8, // 👈 slightly faster
+      speed: 0.8,
       direction: "none",
       random: true,
       outModes: { default: "out" },
@@ -123,7 +123,7 @@ const particleOptions = {
       enable: true,
       distance: 120,
       color: "#6366f1",
-      opacity: 0.25, // 👈 more visible lines
+      opacity: 0.25,
       width: 1,
     },
   },
@@ -167,7 +167,7 @@ const Hero = () => {
           style={{ width: 500, height: 500, top: "-120px", left: "-100px" }}
         />
         <div
-          className="orb orb-teal blob-2"
+          className="orb orb-teal   blob-2"
           style={{ width: 400, height: 400, bottom: "-80px", right: "-80px" }}
         />
         <div
@@ -176,33 +176,20 @@ const Hero = () => {
         />
       </div>
 
-      {/* ── BG Layer 4: Vignette ────────────────────────── */}
-      {/* <div
-        className="absolute inset-0 z-0 pointer-events-none"
-        style={{
-          background:
-            "radial-gradient(ellipse at center, transparent 80%, rgba(248,250,252,0.85) 100%)",
-        }}
-      />
-      <div
-        className="absolute inset-0 z-0 pointer-events-none dark:block hidden"
-        style={{
-          background:
-            "radial-gradient(ellipse at center, transparent 80%, rgba(10,10,15,0.9) 100%)",
-        }}
-      /> */}
-
       {/* ── Main Content ────────────────────────────────── */}
-      <div className="container mx-auto px-6 flex flex-col md:flex-row items-center gap-12 relative z-10">
+      <div className="container mx-auto px-6 flex flex-col md:flex-row items-center gap-8 md:gap-12 relative z-10 py-8 md:py-0">
         {/* Left: Text */}
         <motion.div
           variants={staggerContainer(0.12, 0.3)}
           initial="hidden"
           animate="show"
-          className="flex-1"
+          className="flex-1 text-center md:text-left"
         >
           {/* Badge */}
-          <motion.div variants={fadeUp(0)} className="mb-6">
+          <motion.div
+            variants={fadeUp(0)}
+            className="mb-6 flex justify-center md:justify-start"
+          >
             <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-medium border border-indigo-500/30 bg-indigo-500/10 text-indigo-500 dark:text-indigo-400 backdrop-blur-sm">
               <span className="w-1.5 h-1.5 rounded-full bg-indigo-400 animate-pulse" />
               Available for opportunities
@@ -241,14 +228,17 @@ const Hero = () => {
           {/* Description */}
           <motion.p
             variants={fadeUp(0.3)}
-            className="text-gray-600 dark:text-gray-400 max-w-lg leading-relaxed mb-8"
+            className="text-gray-600 dark:text-gray-400 max-w-lg leading-relaxed mb-8 mx-auto md:mx-0"
           >
             Building modern web experiences with React, Node.js, Laravel and
             more. Passionate about clean code and impactful products.
           </motion.p>
 
           {/* Buttons */}
-          <motion.div variants={fadeUp(0.4)} className="flex gap-4 flex-wrap">
+          <motion.div
+            variants={fadeUp(0.4)}
+            className="flex gap-4 flex-wrap justify-center md:justify-start"
+          >
             <motion.a
               href="/resume.pdf"
               target="_blank"
@@ -280,7 +270,7 @@ const Hero = () => {
           {/* Tech pills */}
           <motion.div
             variants={fadeUp(0.5)}
-            className="flex flex-wrap gap-2 mt-8"
+            className="flex flex-wrap gap-2 mt-8 justify-center md:justify-start"
           >
             {["React", "Node.js", "Laravel", "MongoDB", "Next.js"].map(
               (tech, i) => (
@@ -307,37 +297,38 @@ const Hero = () => {
             delay: 0.4,
             ease: [0.25, 0.46, 0.45, 0.94],
           }}
-          className="flex-1 flex items-center justify-center"
+          className="flex-1 flex items-center justify-center w-full mt-4 md:mt-0"
         >
-          {/* Outer wrapper — floating code positioned relative to this */}
-          <div className="relative w-64 h-64 md:w-75 md:h-75 flex items-center justify-center">
-            {/* ── Floating code snippets ─────────────────── */}
-            {codeSnippets.map((snippet, i) => (
-              <div
-                key={i}
-                className={`absolute ${snippet.float} select-none pointer-events-none`}
-                style={{
-                  top: snippet.top,
-                  left: snippet.left ?? "auto",
-                  right: snippet.right ?? "auto",
-                  color: snippet.color,
-                  fontSize: snippet.size,
-                  fontFamily: "'Fira Code', 'Courier New', monospace",
-                  fontWeight: 600, // 👈 bolder text
-                  whiteSpace: "nowrap",
-                  textShadow: `0 0 20px ${snippet.color}44`,
-                  background: `${snippet.color}18`, // 👈 was 10, now 18 — more visible bg
-                  border: `1px solid ${snippet.color}50`, // 👈 was 25, now 50 — more visible border
-                  borderRadius: "6px",
-                  padding: "4px 10px",
-                  backdropFilter: "blur(4px)",
-                }}
-              >
-                {snippet.text}
-              </div>
-            ))}
+          <div className="relative w-56 h-56 md:w-80 md:h-80 flex items-center justify-center">
+            {/* Floating code snippets — desktop only */}
+            <div className="hidden md:block">
+              {codeSnippets.map((snippet, i) => (
+                <div
+                  key={i}
+                  className={`absolute ${snippet.float} select-none pointer-events-none`}
+                  style={{
+                    top: snippet.top,
+                    left: snippet.left ?? "auto",
+                    right: snippet.right ?? "auto",
+                    color: snippet.color,
+                    fontSize: snippet.size,
+                    fontFamily: "'Fira Code', 'Courier New', monospace",
+                    fontWeight: 600,
+                    whiteSpace: "nowrap",
+                    textShadow: `0 0 20px ${snippet.color}44`,
+                    background: `${snippet.color}18`,
+                    border: `1px solid ${snippet.color}50`,
+                    borderRadius: "6px",
+                    padding: "4px 10px",
+                    backdropFilter: "blur(4px)",
+                  }}
+                >
+                  {snippet.text}
+                </div>
+              ))}
+            </div>
 
-            {/* ── Glow behind photo ─────────────────────── */}
+            {/* Glow behind photo */}
             <div
               className="absolute inset-0 rounded-full pointer-events-none"
               style={{
@@ -347,7 +338,7 @@ const Hero = () => {
               }}
             />
 
-            {/* ── Rotating dashed border ────────────────── */}
+            {/* Rotating dashed border */}
             <motion.div
               animate={{ rotate: 360 }}
               transition={{ repeat: Infinity, duration: 20, ease: "linear" }}
@@ -358,7 +349,7 @@ const Hero = () => {
               }}
             />
 
-            {/* ── Counter-rotating dashed border ────────── */}
+            {/* Counter-rotating dashed border */}
             <motion.div
               animate={{ rotate: -360 }}
               transition={{ repeat: Infinity, duration: 15, ease: "linear" }}
@@ -370,13 +361,12 @@ const Hero = () => {
               }}
             />
 
-            {/* ── Profile Photo ─────────────────────────── */}
+            {/* Profile Photo */}
             <motion.div
               whileHover={{ scale: 1.04 }}
               transition={{ type: "spring", stiffness: 200 }}
-              className="relative z-10 w-48 h-48 md:w-52 md:h-52"
+              className="relative z-10 w-40 h-40 md:w-52 md:h-52"
             >
-              {/* Animated gradient border */}
               <div
                 className="absolute -inset-0.5 rounded-full"
                 style={{

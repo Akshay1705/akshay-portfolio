@@ -96,18 +96,18 @@ const projects = [
     github: "",
   },
   {
-    id: 8,
-    title: "Itinerary.ai – AI Travel Planner",
-    tech: "Python, Django, Gemini API",
-    tags: ["Python", "Django", "AI"],
-    date: "Dec 2025",
-    type: "personal",
-    description:
-      "An AI-powered travel planner that generates personalized itineraries based on user preferences using Gemini API, with backend-driven logic and dynamic data handling.",
-    image: itineraryImg,
-    link: "", // 👈 add if deployed
-    github: "https://github.com/Akshay1705/AI-itinerary-generator",
-  },
+  id: 8,
+  title: "Voyager AI — Plan Smarter Journeys with AI",
+  tech: "Next.js, Python, Django, Gemini API",
+  tags: ["Next.js", "Django"],
+  date: "Dec 2025",
+  type: "personal",
+  description:
+    "An AI-powered travel planning platform that helps users plan smarter journeys through personalized itinerary generation. Built with Next.js, Django, and Gemini API, featuring intelligent recommendations, dynamic backend processing, responsive UI, and deployed full-stack architecture.",
+  image: itineraryImg,
+  link: "https://voyager-ai-lilac.vercel.app/",
+  github: "https://github.com/Akshay1705/AI-itinerary-generator",
+}
 ];
 
 export default projects;
