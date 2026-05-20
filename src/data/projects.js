@@ -55,7 +55,7 @@ const projects = [
       "A responsive adventure-themed bookstore frontend with dark mode, dynamic hero section, and popup-based order form.",
     image: talestogo,
     link: "https://talestogo.vercel.app/",
-    github: "https://github.com/Akshay1705/book-store.git",
+    github: "https://github.com/Akshay1705/book-store",
   },
   {
     id: 5,
@@ -68,6 +68,7 @@ const projects = [
       "A full-stack bucket list management app with user authentication, add/update/delete wishes, filtering, status tracking, and pagination.",
     image: wishcraft,
     link: "https://wishcraft-frontend.vercel.app/",
+    github: "https://github.com/Akshay1705/wishcraft-backend",
   },
   {
     id: 6,
@@ -80,7 +81,7 @@ const projects = [
       "An AI tool that instantly generates creative captions, hashtags, and song suggestions for your social media posts from just a single photo.",
     image: captionAi,
     link: "https://caption-ai-ten.vercel.app/",
-    github: "https://github.com/Akshay1705/caption.ai.git",
+    github: "https://github.com/Akshay1705/caption-ai",
   },
   {
     id: 7,
@@ -96,18 +97,18 @@ const projects = [
     github: "",
   },
   {
-  id: 8,
-  title: "Voyager AI — Plan Smarter Journeys with AI",
-  tech: "Next.js, Python, Django, Gemini API",
-  tags: ["Next.js", "Django"],
-  date: "Dec 2025",
-  type: "personal",
-  description:
-    "An AI-powered travel planning platform that helps users plan smarter journeys through personalized itinerary generation. Built with Next.js, Django, and Gemini API, featuring intelligent recommendations, dynamic backend processing, responsive UI, and deployed full-stack architecture.",
-  image: itineraryImg,
-  link: "https://voyager-ai-lilac.vercel.app/",
-  github: "https://github.com/Akshay1705/AI-itinerary-generator",
-}
+    id: 8,
+    title: "Voyager AI — Plan Smarter Journeys with AI",
+    tech: "Next.js, Python, Django, Gemini API",
+    tags: ["Next.js", "Django"],
+    date: "Dec 2025",
+    type: "personal",
+    description:
+      "An AI-powered travel planning platform that helps users plan smarter journeys through personalized itinerary generation. Built with Next.js, Django, and Gemini API, featuring intelligent recommendations, dynamic backend processing, responsive UI, and deployed full-stack architecture.",
+    image: itineraryImg,
+    link: "https://voyager-ai-lilac.vercel.app/",
+    github: "https://github.com/Akshay1705/AI-itinerary-generator",
+  },
 ];
 
 export default projects;
