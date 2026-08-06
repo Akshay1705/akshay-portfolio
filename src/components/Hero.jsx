@@ -212,9 +212,10 @@ const Hero = () => {
             <Typewriter
               words={[
                 "Full Stack Developer",
-                "MERN & Laravel Enthusiast",
                 "CSE @ Parul University",
                 "Problem Solver",
+                "Building Scalable Web Apps",
+                "Open to Freelance Projects",
               ]}
               loop
               cursor
@@ -377,7 +378,7 @@ const Hero = () => {
               />
               <img
                 src={myPhoto}
-                alt="Akshay Parekh"
+                alt="Akshay Parekh - Full Stack Developer in Vadodara, Gujarat"
                 className="absolute inset-[3px] w-[calc(100%-6px)] h-[calc(100%-6px)] object-cover rounded-full z-10 border-2 border-gray-50 dark:border-[#0A0A0F]"
               />
             </motion.div>
