@@ -173,6 +173,60 @@ h4 {
     z-index: 0;
 }
 
+/* ─── Marquee row edge fades ────────────────────────────── */
+.marquee-fade-left {
+    background: linear-gradient(to right, white, transparent);
+}
+
+.marquee-fade-right {
+    background: linear-gradient(to left, white, transparent);
+}
+
+.dark .marquee-fade-left {
+    background: linear-gradient(to right, #0D1117, transparent);
+}
+
+.dark .marquee-fade-right {
+    background: linear-gradient(to left, #0D1117, transparent);
+}
+
+/* ─── Seamless marquee animations ───────────────────────── */
+@keyframes marquee-left {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(calc(-1 * var(--marquee-distance)));
+    }
+}
+
+@keyframes marquee-right {
+    from {
+        transform: translateX(calc(-1 * var(--marquee-distance)));
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+.marquee-left {
+    animation: marquee-left 30s linear infinite;
+}
+
+.marquee-right {
+    animation: marquee-right 33s linear infinite;
+}
+
+.marquee-left-fast {
+    animation: marquee-left 24s linear infinite;
+}
+
+.marquee-track:hover {
+    animation-play-state: paused;
+}
+
 /* ══════════════════════════════════════════════════════════
    KEYFRAME ANIMATIONS
 ══════════════════════════════════════════════════════════ */
